@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { lessons } from "@/app/data";
+import InteractiveSection from "@/app/components/InteractiveSection";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -77,6 +78,9 @@ export default async function LessonPage({ params }: Props) {
             ))}
           </ul>
         </section>
+
+        {/* Interactive */}
+        <InteractiveSection slug={slug} />
 
         {/* Real Example */}
         <section className="mb-10">
